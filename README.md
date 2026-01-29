@@ -1,29 +1,33 @@
-# Breadboard AI Tutor
+# Breadboard AI Tutor Chatbot
 
-An AI-powered chatbot system designed to help students and hobbyists learn breadboard electronics through interactive guidance and explanations.
+This project is an AI-powered tutor chatbot that helps students learn breadboard experiments.
 
-## About
+It uses:
+- A structured dataset of breadboard experiments (JSON)
+- Retrieval-based grounding (RAG style)
+- Gemini AI API for teacher-style explanations
 
-This project provides an intelligent tutoring system that can answer questions about breadboard circuits, component usage, and electronics fundamentals. Whether you're a beginner learning about LEDs and resistors or exploring more complex circuits, the AI tutor is here to help.
+## Features
+- Step-by-step experiment guidance
+- Component explanations (LED, resistor, buzzer, LDR, etc.)
+- Troubleshooting common mistakes
+- Safe responses grounded only in dataset
 
-## Repository Structure
+## Folder Structure
 
-```
-breadboard-ai-tutor/
-│
-├── data/
-│   └── experiments.json          # Storage for experiment data
-│
-├── notebooks/
-│   └── breadboard_chatbot_demo.ipynb  # Interactive demo notebook
-│
-├── examples/
-│   └── sample_questions.md       # Example questions for the tutor
-│
-├── README.md                     # This file
-│
-└── requirements.txt              # Python dependencies
-```
+data/ → Experiment dataset  
+notebooks/ → Colab chatbot demo  
+examples/ → Sample Q&A outputs  
+
+## Open Notebook in Google Colab
+
+Click below to open directly:
+
+[Open in Colab](https://colab.research.google.com/github/PranavOaR/breadboard-ai-tutor/blob/main/notebooks/breadboard_chatbot_demo.ipynb)
+
+## AI Usage
+Gemini API is used only to rewrite dataset responses into a friendly tutor style.
+The chatbot is strictly grounded and does not hallucinate outside the dataset.
 
 ## Getting Started
 
@@ -31,6 +35,7 @@ breadboard-ai-tutor/
 
 - Python 3.8 or higher
 - pip package manager
+- Gemini API key (get from Google AI Studio)
 
 ### Installation
 
