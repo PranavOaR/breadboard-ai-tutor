@@ -25,6 +25,12 @@ Click below to open directly:
 
 [Open in Colab](https://colab.research.google.com/github/PranavOaR/breadboard-ai-tutor/blob/main/notebooks/breadboard_chatbot_demo.ipynb)
 
+## Student Version Chatbot Notebook
+
+Open the chatbot UI directly:
+
+[Student Chatbot (Gradio UI)](https://colab.research.google.com/github/PranavOaR/breadboard-ai-tutor/blob/main/notebooks/student_chatbot.ipynb)
+
 ## AI Usage
 Gemini API is used only to rewrite dataset responses into a friendly tutor style.
 The chatbot is strictly grounded and does not hallucinate outside the dataset.
