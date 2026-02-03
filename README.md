@@ -35,7 +35,7 @@ Open the chatbot UI directly:
 Gemini API is used only to rewrite dataset responses into a friendly tutor style.
 The chatbot is strictly grounded and does not hallucinate outside the dataset.
 
-**⚠ Note:** Gemini API may be rate-limited on the free tier. The chatbot automatically falls back to dataset-only grounded answers when API quota is exhausted, ensuring it always responds without crashing.
+**Note:** The chatbot is dataset-grounded and automatically works even if Gemini quota is exceeded.
 
 ## Getting Started
 
