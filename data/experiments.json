@@ -1,478 +1,276 @@
 [
   {
-    "experiment_name": "LED Glow with Resistor",
-    "objective": "Learn to light up an LED using a current-limiting resistor to prevent LED burnout",
+    "experiment_name": "Conductors and Insulators Circuit Tester",
+    "objective": "Test whether an object is a conductor or an insulator using a simple bulb circuit.",
     "components": [
-      "1x LED (any color, typically 5mm)",
-      "1x Resistor (220Ω or 330Ω)",
-      "1x Breadboard",
-      "2x Jumper wires",
-      "1x 5V Power supply or 9V battery with connector"
+      "1x Battery",
+      "1x Bulb",
+      "2x Connecting wires",
+      "Test object (rubber, paper clip, coin, etc.)"
     ],
     "steps": [
-      "Identify the LED's anode (longer leg, positive) and cathode (shorter leg, negative)",
-      "Insert the LED into the breadboard with legs in different rows",
-      "Connect one end of the resistor to the same row as the LED's anode",
-      "Connect a jumper wire from the other end of the resistor to the positive power rail",
-      "Connect a jumper wire from the LED's cathode row to the negative power rail",
-      "Connect your power supply: positive to positive rail, negative to negative rail",
-      "Observe the LED glowing steadily"
+      "Connect one wire from the battery positive terminal to the bulb.",
+      "Connect another wire from the bulb to one end of the test object.",
+      "Connect the other end of the test object back to the battery negative terminal.",
+      "Observe whether the bulb glows.",
+      "If bulb glows, the object is a conductor. If not, it is an insulator."
     ],
     "component_working": {
-      "LED": "Light Emitting Diode converts electrical energy to light. Requires 1.8-3.3V depending on color. Must be connected with correct polarity.",
-      "Resistor": "Limits current flow to protect the LED from excess current. Calculated using Ohm's Law: R = (Vs - Vled) / I",
-      "Breadboard": "Prototyping platform with internal connections. Rows are connected horizontally, power rails vertically"
+      "Battery": "Provides electrical energy for the circuit.",
+      "Bulb": "Glows when current flows through it.",
+      "Wire": "Carries current through the circuit.",
+      "Test Object": "Completes the circuit if it conducts electricity."
     },
-    "expected_output": "LED should glow with steady, consistent brightness without flickering. The LED should not be too dim or excessively bright.",
+    "expected_output": "Bulb glows for conductors like metals and stays off for insulators like plastic.",
     "common_mistakes": [
-      "Reversing LED polarity (LED won't light)",
-      "Forgetting the resistor (LED may burn out instantly)",
-      "Using too high resistance value (LED appears very dim)",
-      "Poor connections causing intermittent glow",
-      "Not connecting power rails properly"
+      "Loose wire connections",
+      "Battery not connected properly",
+      "Using a dead battery"
     ],
     "troubleshooting": [
-      "LED not glowing: Check polarity, ensure anode is on positive side",
-      "LED burned out immediately: Was resistor forgotten? Check LED with multimeter",
-      "Very dim LED: Use lower resistance value (150Ω-220Ω instead of 1kΩ)",
-      "Flickering: Check all connection points are firmly inserted",
-      "No power: Verify battery/power supply is working and rails are connected"
+      "If bulb does not glow, check all connections firmly.",
+      "Try testing with a known conductor like a paper clip."
     ],
     "safety_notes": [
-      "Always use a current-limiting resistor with LEDs",
-      "Check voltage rating of LED before connecting to power",
-      "Do not exceed recommended current (typically 20mA for standard LEDs)",
-      "Disconnect power before making circuit changes"
+      "Use only low-voltage batteries.",
+      "Do not test objects connected to mains electricity."
     ]
   },
   {
-    "experiment_name": "Series vs Parallel LEDs",
-    "objective": "Understand the difference between series and parallel circuits by observing LED behavior in both configurations",
+    "experiment_name": "2-Pin LED Breadboard Experiment",
+    "objective": "Learn to connect a basic 2-pin LED on a breadboard with correct polarity.",
     "components": [
-      "3x LEDs (same color recommended)",
-      "3x Resistors (330Ω for parallel, 100Ω for series)",
+      "1x 2-pin LED",
       "1x Breadboard",
+      "1x Battery pack",
+      "Jumper wires"
+    ],
+    "steps": [
+      "Identify LED legs: longer leg is positive (anode), shorter leg is negative (cathode).",
+      "Insert LED legs into two different rows of the breadboard.",
+      "Connect LED anode row to battery positive rail.",
+      "Connect LED cathode row to battery negative rail.",
+      "Observe the LED glowing."
+    ],
+    "component_working": {
+      "LED": "Glows only when connected with correct polarity.",
+      "Breadboard": "Provides internal row connections for circuit building."
+    },
+    "expected_output": "LED glows steadily when polarity is correct.",
+    "common_mistakes": [
+      "Reversing LED polarity",
+      "Placing LED legs in same breadboard row"
+    ],
+    "troubleshooting": [
+      "If LED does not glow, flip the LED direction.",
+      "Ensure LED legs are placed in different rows."
+    ],
+    "safety_notes": [
+      "Disconnect power before rewiring."
+    ]
+  },
+  {
+    "experiment_name": "Motor Polarity Experiment",
+    "objective": "Understand how DC motor direction changes with polarity reversal.",
+    "components": [
+      "1x DC motor",
+      "1x Battery pack",
       "Jumper wires",
-      "1x 9V battery with connector"
+      "Breadboard"
     ],
     "steps": [
-      "SERIES CIRCUIT: Connect LED1's anode to positive rail through a 100Ω resistor",
-      "Connect LED1's cathode to LED2's anode in the next row",
-      "Connect LED2's cathode to LED3's anode",
-      "Connect LED3's cathode to negative rail",
-      "Observe all LEDs glowing with equal brightness",
-      "PARALLEL CIRCUIT: Connect all three LED anodes to positive rail (each through its own 330Ω resistor)",
-      "Connect all three LED cathodes to negative rail",
-      "Observe all LEDs glowing brightly",
-      "Try removing one LED from each circuit and observe what happens"
+      "Connect one motor terminal to battery positive.",
+      "Connect the other motor terminal to battery negative.",
+      "Observe the motor spinning in one direction.",
+      "Reverse the battery connections.",
+      "Observe the motor spinning in the opposite direction."
     ],
     "component_working": {
-      "Series Circuit": "Current flows through each component one after another. Same current through all LEDs. Total voltage is divided among components. If one fails, all stop working.",
-      "Parallel Circuit": "Current divides among multiple paths. Each LED gets full voltage. If one fails, others continue working independently.",
-      "Voltage Distribution": "In series: V_total = V1 + V2 + V3. In parallel: V_total = V1 = V2 = V3"
+      "DC Motor": "Converts electrical energy into motion. Direction depends on polarity.",
+      "Battery": "Provides power to run the motor."
     },
-    "expected_output": "Series: All LEDs glow dimmer than in parallel (voltage divided). Parallel: All LEDs glow brightly (each gets full voltage). Removing one LED in series breaks entire circuit; in parallel, others continue.",
+    "expected_output": "Motor spins forward, then reverses direction when polarity is swapped.",
     "common_mistakes": [
-      "Using same resistor values for both circuits (series needs lower resistance)",
-      "Not using separate resistors for each LED in parallel",
-      "Mixing up series and parallel connection patterns",
-      "Forgetting that series LEDs need higher supply voltage",
-      "Using LEDs with different forward voltages in series"
+      "Weak battery causing motor not to spin",
+      "Loose wire connections"
     ],
     "troubleshooting": [
-      "Series LEDs too dim: Reduce resistor value or increase voltage",
-      "Parallel LEDs have different brightness: Check resistor values are equal",
-      "One LED not working in series: Check that specific LED's polarity and function",
-      "Parallel circuit drains battery fast: Expected behavior, more current draw",
-      "Voltage drop too high in series: Use appropriate power supply (min 9V for 3 LEDs)"
+      "Check battery charge if motor does not spin.",
+      "Ensure wires are firmly attached to motor terminals."
     ],
     "safety_notes": [
-      "For series circuits with multiple LEDs, ensure power supply voltage is sufficient",
-      "Calculate total current for parallel circuits to avoid overloading power supply",
-      "Each LED in parallel must have its own current-limiting resistor"
+      "Do not short the battery terminals."
     ]
   },
   {
-    "experiment_name": "Buzzer Sound Circuit",
-    "objective": "Create a simple circuit to produce sound using an active buzzer and understand audio output components",
+    "experiment_name": "RGB LED with Buzzer Breadboard Circuit",
+    "objective": "Build a circuit combining an RGB LED and buzzer on a breadboard.",
     "components": [
-      "1x Active buzzer (3-5V)",
-      "1x Resistor (100Ω, optional for volume control)",
-      "1x Breadboard",
-      "2x Jumper wires",
-      "1x 5V Power supply"
+      "1x 4-pin RGB LED",
+      "1x Buzzer",
+      "Breadboard",
+      "Battery pack",
+      "Jumper wires"
     ],
     "steps": [
-      "Identify the buzzer's positive (+) and negative (-) terminals (check markings or datasheet)",
-      "Insert the buzzer into the breadboard",
-      "Connect the positive terminal of the buzzer to the positive power rail",
-      "Connect the negative terminal of the buzzer to the negative power rail",
-      "Apply 5V power to the rails",
-      "Listen for a continuous beeping or tone",
-      "Optional: Add a 100Ω resistor in series to reduce volume"
+      "Insert RGB LED pins into breadboard rows.",
+      "Insert buzzer pins into separate rows.",
+      "Connect LED common pin to ground rail.",
+      "Connect one color pin to battery positive through jumper.",
+      "Connect buzzer positive to battery positive rail.",
+      "Connect buzzer negative to ground rail.",
+      "Observe LED glowing and buzzer sounding."
     ],
     "component_working": {
-      "Active Buzzer": "Contains internal oscillator circuit. Produces sound when DC voltage applied. Operates at specific frequency (typically 2-4kHz). Requires correct polarity.",
-      "Passive Buzzer": "Different from active - requires external square wave signal to produce sound. Cannot work with just DC voltage.",
-      "Sound Generation": "Piezoelectric element vibrates at resonant frequency, creating pressure waves (sound)"
+      "RGB LED": "Contains red, green, blue LEDs inside one package.",
+      "Buzzer": "Produces sound when powered."
     },
-    "expected_output": "Buzzer should produce a clear, continuous beeping sound at consistent volume and pitch. Sound should start immediately when power is applied and stop when disconnected.",
+    "expected_output": "RGB LED lights up and buzzer produces sound.",
     "common_mistakes": [
-      "Using passive buzzer instead of active (won't produce sound with DC)",
-      "Reversing polarity (no sound or damaged buzzer)",
-      "Insufficient voltage (weak or no sound)",
-      "Exceeding voltage rating (loud then silent - burned out)",
-      "Poor connections causing intermittent sound"
+      "Incorrect LED pin placement",
+      "Buzzer polarity reversed"
     ],
     "troubleshooting": [
-      "No sound: Check polarity, verify it's an active buzzer, check voltage",
-      "Very quiet sound: Increase voltage within safe range or check connections",
-      "Intermittent sound: Firmly press buzzer pins into breadboard",
-      "Buzzer stopped working: May have exceeded voltage rating, test with multimeter",
-      "Wrong tone: Active buzzers have fixed frequency, cannot be changed"
+      "Test LED colors one at a time.",
+      "Flip buzzer terminals if no sound."
     ],
     "safety_notes": [
-      "Do not exceed the buzzer's maximum voltage rating (typically 5V)",
-      "Active buzzers can be loud - may be uncomfortable in quiet environments",
-      "Reverse polarity may damage some buzzers",
-      "Disconnect power before making changes"
+      "Do not exceed buzzer voltage rating."
     ]
   },
   {
-    "experiment_name": "Push Button + LED Control",
-    "objective": "Learn to control an LED using a push button switch and understand pull-down resistor concepts",
+    "experiment_name": "Windmill + LED + Switch Circuit",
+    "objective": "Control a windmill motor and LED using switches on a breadboard.",
+    "components": [
+      "1x Motor with fan blade (windmill)",
+      "1x LED",
+      "2x Switches",
+      "Battery pack",
+      "Breadboard",
+      "Jumper wires"
+    ],
+    "steps": [
+      "Insert motor terminals into breadboard.",
+      "Insert LED into breadboard rows.",
+      "Connect motor circuit through first switch.",
+      "Connect LED circuit through second switch.",
+      "Connect battery positive to switches input.",
+      "Connect outputs to motor and LED.",
+      "Toggle switches to control motor and LED independently."
+    ],
+    "component_working": {
+      "Switch": "Controls ON/OFF of circuit.",
+      "Motor": "Spins fan when powered.",
+      "LED": "Glows when circuit is completed."
+    },
+    "expected_output": "Switch controls motor and LED separately.",
+    "common_mistakes": [
+      "Switch pins incorrectly connected",
+      "LED polarity reversed"
+    ],
+    "troubleshooting": [
+      "Check switch connections if nothing works.",
+      "Flip LED if it does not glow."
+    ],
+    "safety_notes": [
+      "Turn off power before changing wiring."
+    ]
+  },
+  {
+    "experiment_name": "Types of Motors Activity",
+    "objective": "Explore different motor types and observe basic working with polarity.",
+    "components": [
+      "1x Small DC motor",
+      "Battery pack",
+      "Wires"
+    ],
+    "steps": [
+      "Connect motor to battery terminals.",
+      "Observe spinning motion.",
+      "Reverse polarity and observe reversed direction.",
+      "Discuss applications of motors in daily life."
+    ],
+    "component_working": {
+      "Motor": "Provides rotary motion used in fans, toys, machines."
+    },
+    "expected_output": "Motor spins when powered and reverses when polarity changes.",
+    "common_mistakes": [
+      "Motor not spinning due to weak battery"
+    ],
+    "troubleshooting": [
+      "Replace battery if motor does not spin."
+    ],
+    "safety_notes": [
+      "Do not overload motors with high voltage."
+    ]
+  },
+  {
+    "experiment_name": "LED Brightness Control using Potentiometer",
+    "objective": "Control the brightness of an LED using a potentiometer as a dimmer.",
     "components": [
       "1x LED",
-      "1x Push button (tactile switch)",
-      "1x Resistor 220Ω (for LED)",
-      "1x Resistor 10kΩ (pull-down resistor)",
-      "1x Breadboard",
-      "Jumper wires",
-      "1x 5V Power supply"
+      "1x Potentiometer",
+      "Breadboard",
+      "Battery pack",
+      "Jumper wires"
     ],
     "steps": [
-      "Insert the push button across the center gap of the breadboard",
-      "Connect one pin of the button to the positive power rail",
-      "Connect the diagonally opposite pin to a row on the breadboard",
-      "Connect the LED anode to that same row through a 220Ω resistor",
-      "Connect the LED cathode to the negative rail",
-      "Add a 10kΩ resistor from the button output row to the negative rail (pull-down)",
-      "Press the button and observe the LED light up",
-      "Release the button and observe the LED turn off"
+      "Insert potentiometer into breadboard.",
+      "Connect outer pins to positive and ground rails.",
+      "Connect middle pin to LED anode through resistor.",
+      "Connect LED cathode to ground.",
+      "Rotate knob to change brightness."
     ],
     "component_working": {
-      "Push Button": "Momentary switch that completes circuit when pressed. Has two pairs of internally connected pins. Must be placed across breadboard gap.",
-      "Pull-down Resistor": "Ensures the input reads LOW (0V) when button is not pressed. Prevents floating voltage states. Typical values: 10kΩ-100kΩ.",
-      "Switch Debouncing": "Physical switches can cause multiple signals. Capacitors or software can debounce if needed for digital circuits."
+      "Potentiometer": "Variable resistor that controls voltage output.",
+      "LED": "Brightness depends on current flow."
     },
-    "expected_output": "LED should turn ON immediately when button is pressed and turn OFF immediately when button is released. No flickering or delay should occur.",
+    "expected_output": "LED brightness increases or decreases smoothly when knob is rotated.",
     "common_mistakes": [
-      "Placing button incorrectly (both pins on same side of gap)",
-      "Forgetting the pull-down resistor (erratic behavior, LED may glow dimly)",
-      "Connecting wrong button pins (button appears to always be pressed)",
-      "LED in wrong polarity (won't light when button pressed)",
-      "Using resistor value too low for pull-down (wastes current)"
+      "Wrong potentiometer pin usage"
     ],
     "troubleshooting": [
-      "LED always on: Button pins may be shorted or wrong pins connected",
-      "LED never lights: Check button orientation and LED polarity",
-      "Dim LED when button not pressed: Missing or wrong value pull-down resistor",
-      "Flickering LED: Poor button contact or loose connections",
-      "Button seems stuck: Check if button is damaged, test continuity"
+      "Ensure middle pin is connected to LED circuit."
     ],
     "safety_notes": [
-      "Tactile switches are rated for low voltage/current - don't exceed specifications",
-      "Always use current-limiting resistor with LED",
-      "Ensure button is rated for your power supply voltage"
+      "Always use resistor to protect LED."
     ]
   },
   {
-    "experiment_name": "LDR Light Sensor with LED",
-    "objective": "Create a light-sensitive circuit using an LDR (Light Dependent Resistor) to automatically control an LED based on ambient light",
+    "experiment_name": "LDR Light Sensor with LED and Buzzer",
+    "objective": "Build a light-sensitive alarm circuit using an LDR, LED and buzzer.",
     "components": [
-      "1x LDR (Light Dependent Resistor)",
+      "1x LDR sensor",
       "1x LED",
-      "1x Resistor 220Ω (for LED)",
-      "1x Resistor 10kΩ (voltage divider)",
-      "1x NPN Transistor (2N2222 or BC547)",
-      "1x Breadboard",
-      "Jumper wires",
-      "1x 9V battery"
+      "1x Buzzer",
+      "Resistors",
+      "Breadboard",
+      "Battery pack",
+      "Jumper wires"
     ],
     "steps": [
-      "Create a voltage divider: Connect LDR between positive rail and a middle row",
-      "Connect 10kΩ resistor from that middle row to negative rail",
-      "Connect the middle point (between LDR and resistor) to the base of transistor",
-      "Connect transistor emitter to negative rail",
-      "Connect LED anode to positive rail through 220Ω resistor",
-      "Connect LED cathode to transistor collector",
-      "Test: Cover LDR with hand (dark) - LED should glow",
-      "Expose LDR to bright light - LED should dim or turn off"
+      "Insert LDR into breadboard.",
+      "Create a voltage divider with LDR and resistor.",
+      "Connect LED to output node.",
+      "Connect buzzer to same node for alarm indication.",
+      "Cover LDR to simulate darkness.",
+      "Observe LED glowing and buzzer sounding."
     ],
     "component_working": {
-      "LDR": "Resistance decreases with increasing light. Dark: 1MΩ, Bright light: 100Ω-1kΩ. Used in voltage divider to create light-sensitive voltage signal.",
-      "Voltage Divider": "V_out = V_in × (R2 / (R1 + R2)). As LDR resistance changes with light, output voltage changes, controlling transistor.",
-      "Transistor": "Acts as electronic switch. Base voltage controls collector-emitter current flow. Small base current controls larger LED current."
+      "LDR": "Changes resistance based on light level.",
+      "Buzzer": "Sounds when powered.",
+      "LED": "Provides visual indication of darkness."
     },
-    "expected_output": "In darkness (LDR covered), LED glows brightly. In bright light, LED turns off or becomes very dim. Transition should be smooth, responding to light level changes within 1-2 seconds.",
+    "expected_output": "In darkness, LED glows and buzzer sounds; in light, both reduce activity.",
     "common_mistakes": [
-      "Wrong transistor pin connections (BCE pins vary by model)",
-      "LDR and resistor positions swapped in divider (inverted behavior)",
-      "Resistor value too high or low (no switching or always on)",
-      "LED connected backwards (won't light even in dark)",
-      "Not accounting for ambient light level in room"
+      "Incorrect resistor values causing no change",
+      "Loose LDR connections"
     ],
     "troubleshooting": [
-      "LED always on: Check transistor connections, may need higher base resistor",
-      "LED always off: Transistor may be damaged, check LDR functionality",
-      "Inverted behavior (LED on in light): Swap LDR and 10kΩ resistor positions",
-      "Slow response: Normal for some LDRs, or check for poor connections",
-      "Sensitivity too low: Try different resistor values (4.7kΩ-47kΩ range)"
+      "Swap divider resistor values to adjust sensitivity."
     ],
     "safety_notes": [
-      "LDRs are not polarized - can be connected either way",
-      "Do not exceed transistor's maximum voltage and current ratings",
-      "Ensure proper transistor orientation (flat side alignment with circuit diagram)"
-    ]
-  },
-  {
-    "experiment_name": "Potentiometer LED Brightness Control",
-    "objective": "Learn to control LED brightness using a potentiometer and understand variable resistance and analog control",
-    "components": [
-      "1x LED",
-      "1x Potentiometer (10kΩ)",
-      "1x Resistor 220Ω (current-limiting)",
-      "1x Breadboard",
-      "Jumper wires",
-      "1x 9V battery"
-    ],
-    "steps": [
-      "Identify the three pins of the potentiometer: two outer pins and one middle (wiper) pin",
-      "Connect one outer pin of the potentiometer to the positive rail",
-      "Connect the other outer pin to the negative rail",
-      "Connect the middle pin (wiper) to one end of the 220Ω resistor",
-      "Connect the other end of the resistor to the LED anode",
-      "Connect the LED cathode to the negative rail",
-      "Rotate the potentiometer knob and observe LED brightness changing",
-      "Turn fully in one direction - LED should be brightest or off",
-      "Turn fully in the other direction - LED behavior should reverse"
-    ],
-    "component_working": {
-      "Potentiometer": "Three-terminal variable resistor. Acts as voltage divider. Wiper (middle pin) provides variable voltage between 0V and V_supply as knob rotates.",
-      "Voltage Division": "As wiper moves, it divides total resistance. Changes voltage available to LED, controlling current and brightness.",
-      "Analog Control": "Provides continuous control unlike digital ON/OFF. Allows smooth brightness adjustment."
-    },
-    "expected_output": "Smoothly rotating the potentiometer should continuously vary LED brightness from completely off to maximum brightness. No flickering or stepping should occur - transition should be smooth and linear.",
-    "common_mistakes": [
-      "Connecting only two pins of potentiometer (works as fixed resistor)",
-      "Connecting LED directly to wiper without current-limiting resistor (may burn out)",
-      "Using potentiometer value too high (LED always dim)",
-      "Not connecting outer pins to power rails (no voltage divider effect)",
-      "Loose potentiometer connections causing flickering"
-    ],
-    "troubleshooting": [
-      "LED brightness doesn't change: Check wiper connection and ensure outer pins are on power rails",
-      "LED always dim: Add lower value resistor or check potentiometer value",
-      "LED flickers when adjusting: Poor connections, re-seat potentiometer",
-      "No effect in part of rotation: Potentiometer may be damaged",
-      "LED too bright/dim at extremes: May need different potentiometer value or adjust resistor"
-    ],
-    "safety_notes": [
-      "Always include current-limiting resistor with LED",
-      "Don't force potentiometer past its rotation limits",
-      "Some potentiometers have limited rotation (270°), others are multi-turn"
-    ]
-  },
-  {
-    "experiment_name": "Transistor as a Switch",
-    "objective": "Understand how a transistor functions as an electronic switch to control high-current loads with low-current signals",
-    "components": [
-      "1x NPN Transistor (2N2222, BC547, or similar)",
-      "1x LED",
-      "1x Resistor 220Ω (for LED)",
-      "1x Resistor 1kΩ (base resistor)",
-      "1x Push button",
-      "1x Breadboard",
-      "Jumper wires",
-      "1x 9V battery"
-    ],
-    "steps": [
-      "Identify transistor pins: Collector (C), Base (B), Emitter (E) - check datasheet",
-      "Insert transistor into breadboard with E, B, C in separate rows",
-      "Connect transistor emitter to negative rail (ground)",
-      "Connect LED anode to positive rail through 220Ω resistor",
-      "Connect LED cathode to transistor collector",
-      "Connect one side of push button to positive rail",
-      "Connect other side of button to transistor base through 1kΩ resistor",
-      "Press button - LED should turn ON",
-      "Release button - LED should turn OFF"
-    ],
-    "component_working": {
-      "NPN Transistor": "Three-layer semiconductor device. Small base current controls large collector-emitter current. Acts as current amplifier or electronic switch.",
-      "Base Resistor": "Limits base current to safe level. Typical values: 1kΩ-10kΩ. Too low wastes current, too high won't fully saturate transistor.",
-      "Saturation": "When base current sufficient, transistor fully ON - acts like closed switch. V_CE ≈ 0.2V. LED gets maximum current.",
-      "Cut-off": "When base current zero, transistor fully OFF - acts like open switch. No collector current flows."
-    },
-    "expected_output": "When button pressed: LED lights immediately at full brightness. When button released: LED turns OFF immediately. Transistor should not heat up (if it does, reduce base current).",
-    "common_mistakes": [
-      "Wrong transistor pin order (E, B, C vary by package type)",
-      "No base resistor (excessive base current, transistor damage)",
-      "Using PNP transistor circuit for NPN (won't work without modification)",
-      "Base resistor too high (transistor doesn't fully saturate, LED dim)",
-      "Connecting load between emitter and ground (incorrect, reduces efficiency)"
-    ],
-    "troubleshooting": [
-      "LED doesn't light when button pressed: Check transistor pins, ensure NPN type",
-      "LED always on: Base may be shorted to positive, check button connection",
-      "Dim LED: Base resistor too high, try lower value (470Ω-1kΩ)",
-      "Transistor gets hot: Base current too high, increase base resistor",
-      "LED flickers: Check all connections, especially ground and button contacts"
-    ],
-    "safety_notes": [
-      "Always use base resistor to prevent transistor damage",
-      "Check transistor maximum collector current rating (typically 100-800mA for small signal transistors)",
-      "Ensure transistor can handle the load current",
-      "For high-power loads, use appropriate transistor (TIP120) or MOSFET"
-    ]
-  },
-  {
-    "experiment_name": "Buzzer with Push Button",
-    "objective": "Combine push button input with buzzer output to create an interactive sound circuit and learn basic input-output control",
-    "components": [
-      "1x Active buzzer",
-      "1x Push button",
-      "1x Resistor 10kΩ (pull-down)",
-      "1x Breadboard",
-      "Jumper wires",
-      "1x 5V Power supply"
-    ],
-    "steps": [
-      "Insert push button across breadboard center gap",
-      "Connect one button terminal to positive rail",
-      "Connect the diagonal opposite terminal to a middle row (output node)",
-      "Connect 10kΩ resistor from output node to negative rail (pull-down)",
-      "Connect buzzer positive terminal to the output node",
-      "Connect buzzer negative terminal to negative rail",
-      "Apply 5V power",
-      "Press button - buzzer should sound",
-      "Release button - buzzer should stop"
-    ],
-    "component_working": {
-      "Circuit Logic": "Button acts as mechanical switch. When pressed, connects buzzer to positive voltage. When released, pull-down resistor ensures clean LOW state.",
-      "Pull-down Resistor": "Prevents floating voltage when button not pressed. Ensures buzzer is completely off. Value not critical (10kΩ typical).",
-      "Active Buzzer Control": "Simple ON/OFF control. Direct connection possible because buzzer has internal driver circuit."
-    },
-    "expected_output": "Pressing button should produce immediate, clear buzzer sound. Releasing button should stop sound immediately. No residual noise or delay. Button should have tactile click feedback.",
-    "common_mistakes": [
-      "Button orientation wrong (pins on same side of gap)",
-      "Buzzer polarity reversed (no sound)",
-      "Missing pull-down resistor (buzzer may hum when button not pressed)",
-      "Voltage too low for buzzer (weak or no sound)",
-      "Wrong button pins connected (appears always pressed or never works)"
-    ],
-    "troubleshooting": [
-      "Buzzer always on: Button may be shorted, check correct pins used",
-      "Buzzer never sounds: Check polarity, verify active buzzer type, check voltage",
-      "Faint buzzing when not pressed: Add or check pull-down resistor",
-      "Button requires hard press: Normal for some tactile switches, or poor insertion",
-      "Sound cuts in and out: Loose connections, firmly insert components"
-    ],
-    "safety_notes": [
-      "Check buzzer voltage rating before connecting (typically 3-5V)",
-      "Active buzzers can be loud - be mindful in shared spaces",
-      "Disconnect power before making circuit modifications"
-    ]
-  },
-  {
-    "experiment_name": "Continuity Test Using LED",
-    "objective": "Build a simple continuity tester to check if wires, switches, or circuit paths are properly connected using an LED indicator",
-    "components": [
-      "1x LED",
-      "1x Resistor 220Ω",
-      "2x Jumper wires with alligator clips or test probes",
-      "1x Breadboard",
-      "1x 5V Power supply or 3V coin cell battery",
-      "Test objects (wires, switches, components)"
-    ],
-    "steps": [
-      "Connect positive power rail to one end of the 220Ω resistor",
-      "Connect other end of resistor to LED anode",
-      "Connect LED cathode to a breadboard row",
-      "Attach a test probe/wire to LED cathode row - this is Probe 1",
-      "Attach another test probe/wire to negative rail - this is Probe 2",
-      "To test continuity: Touch both probes to the two ends of test object",
-      "If LED lights up - GOOD continuity (wire/path intact)",
-      "If LED stays off - NO continuity (broken wire/open circuit)"
-    ],
-    "component_working": {
-      "Continuity": "Electrical connection that allows current flow. Low resistance path (< 1Ω for good conductors). LED lights when complete circuit formed.",
-      "Tester Principle": "When probes touch conductive path, circuit completes through test object, allowing current to flow and light LED.",
-      "Resistance Testing": "Only works for low resistance paths. High resistance (>1kΩ) may not light LED brightly or at all."
-    },
-    "expected_output": "Good wire/connection: LED lights brightly. Broken wire: LED stays off. Partially broken wire: LED may glow dimly. Switch closed: LED on. Switch open: LED off. Response should be immediate.",
-    "common_mistakes": [
-      "Testing high-resistance components (resistors >1kΩ appear as open circuit)",
-      "Probes touching each other during testing (false positive)",
-      "Battery too weak (LED very dim for good connections)",
-      "Not insulating probe tips (accidental shorts to other metal parts)",
-      "Testing capacitors (may briefly light then fade)"
-    ],
-    "troubleshooting": [
-      "LED always on even without connecting probes: Probes or circuit may be shorted",
-      "LED never lights even with known good wire: Check tester battery/power and LED polarity",
-      "Dim LED on good connections: Battery weak, replace power source",
-      "Inconsistent results: Loose connections in tester circuit itself",
-      "LED flickers: Poor contact with test probes, clean probe tips"
-    ],
-    "safety_notes": [
-      "NEVER use on live circuits - only test de-energized components and wires",
-      "Do not test mains voltage circuits (120V/240V) - use proper multimeter",
-      "This tester only shows continuity, not resistance value",
-      "Discharge capacitors before testing them"
-    ]
-  },
-  {
-    "experiment_name": "Understanding Breadboard Rows and Rails",
-    "objective": "Learn the internal connection structure of a breadboard by testing continuity between different holes using LEDs",
-    "components": [
-      "3x LEDs (different colors helpful)",
-      "3x Resistors (220Ω)",
-      "1x Breadboard",
-      "Jumper wires",
-      "1x 5V Power supply"
-    ],
-    "steps": [
-      "TEST 1 - Horizontal Rows: Insert LED1 anode in hole a5, cathode in a6 (same row). Connect resistor from b5 to positive rail, a6 to negative rail. LED should light (row holes connected).",
-      "TEST 2 - Vertical Separation: Move LED1 cathode to f6 (across center gap). LED should NOT light (sides not connected across gap).",
-      "TEST 3 - Power Rails: Insert LED2 with resistor along positive rail in multiple positions, cathode to negative rail. All positions light (rail holes connected vertically).",
-      "TEST 4 - Multiple Components: Insert LED3 in same row as LED2 but different holes (like a10, b10). Both should light (sharing row connection).",
-      "TEST 5 - Rail Independence: Check that left and right power rails are NOT connected (unless you bridge them)."
-    ],
-    "component_working": {
-      "Breadboard Structure": "Two main areas: terminal strips (center) and power rails (sides). Terminal strips: 5 holes per row (a-e) connected horizontally, separated by center gap. Rows are independent vertically.",
-      "Power Rails": "Two vertical strips per side: positive (+, red) and negative (-, blue/black). All holes in same rail connected vertically. Left and right rails independent unless bridged.",
-      "Center Gap": "Divides breadboard for IC placement. IC straddles gap with pins on both sides. No electrical connection across gap."
-    },
-    "expected_output": "Test 1: LED lights (same row connection). Test 2: LED off (no connection across gap). Test 3: LEDs light in all rail positions. Test 4: Multiple LEDs in same row all light. Test 5: Rails on opposite sides independent.",
-    "common_mistakes": [
-      "Assuming all holes in a column are connected (only rows are connected)",
-      "Thinking gap is connected (it's deliberately isolated for ICs)",
-      "Not connecting left and right power rails (they're separate)",
-      "Inserting components too shallow (not making contact)",
-      "Using both sides of gap as single row (will short circuit some designs)"
-    ],
-    "troubleshooting": [
-      "Test shows unexpected results: Component legs may not be fully inserted",
-      "All tests fail: Check power supply connection to rails",
-      "Some positions work, others don't: Breadboard may have damaged internal connections",
-      "LEDs in same row show different brightness: Unequal resistance in connections, re-insert firmly",
-      "Power rails not working: Ensure jumpers properly connect supply to rails"
-    ],
-    "safety_notes": [
-      "Always disconnect power before inserting or removing components",
-      "Do not force components - breadboard holes have limits",
-      "Avoid inserting very thick wires that can damage spring contacts",
-      "Keep track of power rail polarity to avoid reverse voltage damage"
+      "Ensure correct polarity for LED and buzzer."
     ]
   }
 ]
