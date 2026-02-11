@@ -5,7 +5,7 @@ This project is an AI-powered tutor chatbot that helps students learn breadboard
 It uses:
 - A structured dataset of breadboard experiments (JSON)
 - Retrieval-based grounding (RAG style)
-- Gemini AI API for teacher-style explanations
+- Groq AI API (Llama 3.1) for teacher-style explanations
 
 ## Features
 - Step-by-step experiment guidance
@@ -32,10 +32,10 @@ Open the chatbot UI directly:
 [Student Chatbot (Gradio UI)](https://colab.research.google.com/github/PranavOaR/breadboard-ai-tutor/blob/main/notebooks/student_chatbot.ipynb)
 
 ## AI Usage
-Gemini API is used only to rewrite dataset responses into a friendly tutor style.
+Groq API (Llama 3.1) is used only to rewrite dataset responses into a friendly tutor style.
 The chatbot is strictly grounded and does not hallucinate outside the dataset.
 
-**Note:** The chatbot is dataset-grounded and automatically works even if Gemini quota is exceeded.
+**Note:** The chatbot is dataset-grounded and automatically works even if Groq quota is exceeded.
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ The chatbot is strictly grounded and does not hallucinate outside the dataset.
 
 - Python 3.8 or higher
 - pip package manager
-- Gemini API key (get from Google AI Studio)
+- Groq API key (get free from [console.groq.com](https://console.groq.com))
 
 ### Installation
 
