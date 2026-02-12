@@ -8,7 +8,7 @@ It uses:
 - Groq AI API (Llama 3.1) for teacher-style explanations
 
 ## Features
-- Step-by-step experiment guidance
+- Step-by-step experiment guidance 
 - Component explanations (LED, resistor, buzzer, LDR, etc.)
 - Troubleshooting common mistakes
 - Safe responses grounded only in dataset
