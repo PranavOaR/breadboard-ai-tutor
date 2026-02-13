@@ -15,7 +15,7 @@ It uses:
 
 ## Folder Structure
 
-data/ → Experiment dataset  
+data/ → Experiment dataset. 
 notebooks/ → Colab chatbot demo  
 examples/ → Sample Q&A outputs  
 
